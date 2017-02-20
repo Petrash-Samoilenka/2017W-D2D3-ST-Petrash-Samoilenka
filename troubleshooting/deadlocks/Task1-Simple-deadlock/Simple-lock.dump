@@ -1,0 +1,115 @@
+d:\Java\jdk1.7.0_67\bin>jcmd 7932 Thread.print
+7932:
+2017-02-17 14:54:58
+Full thread dump Java HotSpot(TM) 64-Bit Server VM (24.65-b04 mixed mode):
+
+"RMI Scheduler(0)" daemon prio=6 tid=0x00000000119e3000 nid=0xa4c waiting on condition [0x000000001216f000]
+   java.lang.Thread.State: WAITING (parking)
+        at sun.misc.Unsafe.park(Native Method)
+        - parking to wait for  <0x00000007abc905b8> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+        at java.util.concurrent.locks.LockSupport.park(LockSupport.java:186)
+        at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2043)
+        at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1079)
+        at java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:807)
+        at java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1068)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+        at java.lang.Thread.run(Thread.java:745)
+
+"RMI TCP Accept-0" daemon prio=6 tid=0x0000000011a8c800 nid=0x117c runnable [0x0000000011f6f000]
+   java.lang.Thread.State: RUNNABLE
+        at java.net.DualStackPlainSocketImpl.accept0(Native Method)
+        at java.net.DualStackPlainSocketImpl.socketAccept(DualStackPlainSocketImpl.java:131)
+        at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:398)
+        at java.net.PlainSocketImpl.accept(PlainSocketImpl.java:199)
+        - locked <0x00000007abc91d08> (a java.net.SocksSocketImpl)
+        at java.net.ServerSocket.implAccept(ServerSocket.java:530)
+        at java.net.ServerSocket.accept(ServerSocket.java:498)
+        at sun.management.jmxremote.LocalRMIServerSocketFactory$1.accept(LocalRMIServerSocketFactory.java:52)
+        at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:388)
+        at sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:360)
+        at java.lang.Thread.run(Thread.java:745)
+
+"DestroyJavaVM" prio=6 tid=0x0000000002de0800 nid=0x2160 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Thread-1" prio=6 tid=0x000000000fbce800 nid=0x1234 waiting for monitor entry [0x000000001172f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+        at ts.task1.TaskLoader$Thread2.run(TaskLoader.java:40)
+        - waiting to lock <0x00000007ab44f968> (a java.lang.Object)
+        - locked <0x00000007ab44f978> (a java.lang.Object)
+
+"Thread-0" prio=6 tid=0x000000000fbcd800 nid=0x2974 waiting for monitor entry [0x000000001162f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+        at ts.task1.TaskLoader$Thread1.run(TaskLoader.java:25)
+        - waiting to lock <0x00000007ab44f978> (a java.lang.Object)
+        - locked <0x00000007ab44f968> (a java.lang.Object)
+
+"Service Thread" daemon prio=6 tid=0x000000000fbb0800 nid=0x23e0 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread1" daemon prio=10 tid=0x000000000fba4800 nid=0x2754 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" daemon prio=10 tid=0x000000000fba3000 nid=0x2a34 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Attach Listener" daemon prio=10 tid=0x000000000fba2000 nid=0x2234 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Signal Dispatcher" daemon prio=10 tid=0x000000000fb9e800 nid=0x26ec runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" daemon prio=8 tid=0x000000000fb6e000 nid=0x2738 in Object.wait() [0x0000000010f2f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        - waiting on <0x00000007ab405608> (a java.lang.ref.ReferenceQueue$Lock)
+        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:135)
+        - locked <0x00000007ab405608> (a java.lang.ref.ReferenceQueue$Lock)
+        at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:151)
+        at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:209)
+
+"Reference Handler" daemon prio=10 tid=0x000000000fb64800 nid=0x494 in Object.wait() [0x0000000010e2f000]
+   java.lang.Thread.State: WAITING (on object monitor)
+        at java.lang.Object.wait(Native Method)
+        - waiting on <0x00000007ab405190> (a java.lang.ref.Reference$Lock)
+        at java.lang.Object.wait(Object.java:503)
+        at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:133)
+        - locked <0x00000007ab405190> (a java.lang.ref.Reference$Lock)
+
+"VM Thread" prio=10 tid=0x000000000fb60000 nid=0x2194 runnable
+
+"GC task thread#0 (ParallelGC)" prio=6 tid=0x0000000002df7000 nid=0xc50 runnable
+
+"GC task thread#1 (ParallelGC)" prio=6 tid=0x0000000002df8800 nid=0x78 runnable
+
+"GC task thread#2 (ParallelGC)" prio=6 tid=0x0000000002dfa000 nid=0x2300 runnable
+
+"GC task thread#3 (ParallelGC)" prio=6 tid=0x0000000002dfc000 nid=0x29f8 runnable
+
+"VM Periodic Task Thread" prio=10 tid=0x000000000fbcb800 nid=0xe0 waiting on condition
+
+JNI global references: 150
+
+
+Found one Java-level deadlock:
+=============================
+"Thread-1":
+  waiting to lock monitor 0x000000000fb6c6d8 (object 0x00000007ab44f968, a java.lang.Object),
+  which is held by "Thread-0"
+"Thread-0":
+  waiting to lock monitor 0x000000000fb6db78 (object 0x00000007ab44f978, a java.lang.Object),
+  which is held by "Thread-1"
+
+Java stack information for the threads listed above:
+===================================================
+"Thread-1":
+        at ts.task1.TaskLoader$Thread2.run(TaskLoader.java:40)
+        - waiting to lock <0x00000007ab44f968> (a java.lang.Object)
+        - locked <0x00000007ab44f978> (a java.lang.Object)
+"Thread-0":
+        at ts.task1.TaskLoader$Thread1.run(TaskLoader.java:25)
+        - waiting to lock <0x00000007ab44f978> (a java.lang.Object)
+        - locked <0x00000007ab44f968> (a java.lang.Object)
+
+Found 1 deadlock.
