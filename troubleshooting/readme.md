@@ -1,4 +1,4 @@
-##Module 1. Java: Troubleshooting
+## Module 1. Java: Troubleshooting
 
 **Task 1 (Simple Deadlock)**: Implement java application to reproduce deadlock below.
 Collect thread dumps.
