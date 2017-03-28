@@ -10,3 +10,5 @@ Use Cases Within the application, the user should be able to:
 - View single news message.
 - Get lit with news for specific author 
 
+
+![alt text](schema.png "DB schema")
