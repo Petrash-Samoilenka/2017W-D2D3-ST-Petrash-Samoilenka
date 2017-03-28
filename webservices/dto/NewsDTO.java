@@ -1,56 +1,89 @@
 package dto;
 
 import java.io.Serializable;
+import java.time.OffsetDateTime;
+import java.util.List;
+
 import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+import core.convertors.OffsetDateTimeXmlAdapter;
+
+import dao.model.Author;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "news")
 public class NewsDTO implements Serializable{
 
-  private static final long serialVersionUID = 1L;
-  @XmlElement(name = "id")
-  private Long postId;
-  @XmlElement(name = "title")
-  private String title;
-  @XmlElement(name = "description")
-  private String description;
-  @XmlElement(name = "author")
-  private String author;
-  
-  public NewsDTO() {
+    private static final long serialVersionUID = 1L;
     
-  }
+    @XmlElement(name = "id")
+    private Integer id;
+    @XmlElement(name = "short_text")
+    private String shortText;
+    @XmlElement(name = "full_text")
+    private String fullText;
+    @XmlElement(name = "authors")
+    private List<AuthorDTO> authors;
+    @XmlElement(name = "created")
+    @XmlJavaTypeAdapter(OffsetDateTimeXmlAdapter.class)
+    private OffsetDateTime created;    
+    @XmlElement(name = "modified")
+    @XmlJavaTypeAdapter(OffsetDateTimeXmlAdapter.class)
+    private OffsetDateTime modified;  
+  
+    public NewsDTO() {
+     
+    }
 
-  public Long getPostId() {
-    return postId;
-  }
-
-  public void setPostId(Long postId) {
-    this.postId = postId;
-  }
-
-  public String getTitle() {
-    return title;
-  }
-
-  public void setTitle(String title) {
-    this.title = title;
-  }
-
-  public String getDescription() {
-    return description;
-  }
-
-  public void setDescription(String description) {
-    this.description = description;
-  }
-
-  public String getAuthor() {
-    return author;
-  }
-
-  public void setAuthor(String author) {
-    this.author = author;
-  }
+	public Integer getId() {
+		return id;
+	}
+	
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	
+	public String getShortText() {
+		return shortText;
+	}
+	
+	public void setShortText(String shortText) {
+		this.shortText = shortText;
+	}
+	
+	public String getFullText() {
+		return fullText;
+	}
+	
+	public void setFullText(String fullText) {
+		this.fullText = fullText;
+	}
+	
+	public List<AuthorDTO> getAuthors() {
+		return authors;
+	}
+	
+	public void setAuthors(List<AuthorDTO> authors) {
+		this.authors = authors;
+	}
+	
+	public OffsetDateTime getCreated() {
+		return created;
+	}
+	
+	public void setCreated(OffsetDateTime created) {
+		this.created = created;
+	}
+	
+	public OffsetDateTime getModified() {
+		return modified;
+	}
+	
+	public void setModified(OffsetDateTime modified) {
+		this.modified = modified;
+	} 
+	
+	
   
 }
