@@ -1,4 +1,4 @@
-##Module 6. Infrastructure. Continuous integration concepts (Jenkins)
+## Module 6  Infrastructure Continuous integration concepts (Jenkins)
 
 1. Install jenkins on local  PC
 2. Configure jenkins build for zeyt project
