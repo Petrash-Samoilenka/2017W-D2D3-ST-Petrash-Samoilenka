@@ -7,8 +7,8 @@
   <scm class="hudson.scm.SubversionSCM" plugin="subversion@2.7.2">
     <locations>
       <hudson.scm.SubversionSCM_-ModuleLocation>
-        <remote>svn://kap-wfr-svn.int.kronos.com/zeyt</remote>
-        <credentialsId>a4246911-e033-4860-967f-fefca491c007</credentialsId>
+        <remote>file:///D:/localsvn/zeyt/zeyt</remote>
+        <credentialsId></credentialsId>
         <depthOption>infinity</depthOption>
         <ignoreExternalsOption>true</ignoreExternalsOption>
       </hudson.scm.SubversionSCM_-ModuleLocation>
@@ -37,7 +37,6 @@
     <hudson.tasks.Ant plugin="ant@1.4">
       <targets>Build</targets>
       <antName>Ant 1.9</antName>
-      <antOpts>-Xmx4g -Xss128k -XX:+HeapDumpOnOutOfMemoryError -XX:+CMSClassUnloadingEnabled -XX:+CMSPermGenSweepingEnabled -XX:MaxPermSize=512M  -XX:PermSize=512M -Duser.timezone=US/Eastern</antOpts>
       <buildFile>build.xml</buildFile>
     </hudson.tasks.Ant>
     <hudson.tasks.BatchFile>
