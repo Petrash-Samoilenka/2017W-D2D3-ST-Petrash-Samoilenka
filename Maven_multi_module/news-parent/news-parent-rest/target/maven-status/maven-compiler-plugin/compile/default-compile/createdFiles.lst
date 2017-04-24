@@ -1,0 +1,4 @@
+main\java\news\parent\core\Router.class
+main\java\news\parent\core\convertors\OffsetDateTimeXmlAdapter.class
+main\java\news\parent\core\convertors\NewsConvertor.class
+main\java\news\parent\core\convertors\AuthorConvertor.class

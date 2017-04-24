@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="news-parent-data-source">
+        <wb-resource deploy-path="/" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/" source-path="/src/test/java"/>
+        <property name="context-root" value="news-parent-data-source"/>
+        <property name="java-output-path" value="/news-parent-data-source/target/classes"/>
+    </wb-module>
+</project-modules>

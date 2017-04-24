@@ -1,0 +1,8 @@
+main\java\news\parent\dto\AuthorDTO.class
+main\java\news\parent\convertors\OffsetDateTimeXmlAdapter.class
+main\java\news\parent\dao\model\AuthorDAO.class
+main\java\news\parent\dto\NewsDTO.class
+main\java\news\parent\dao\model\News.class
+main\java\news\parent\dao\model\NewsDAO.class
+main\java\news\parent\dao\H2DBService.class
+main\java\news\parent\dao\model\Author.class
