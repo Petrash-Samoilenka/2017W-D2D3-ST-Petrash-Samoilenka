@@ -1,0 +1,32 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+      <title>News hub</title>
+<body>    
+    <div>        
+        <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Body</th>
+                    <th>Authors</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="news : ${newsList}">
+                       <td th:text="${news.id}"></td>
+                       <td th:text="${news.short_text}"></td>
+                       <td th:text="${news.fullText}"></td>
+                       <td th:text="${news.authors}"></td>
+                       <td th:text="${news.authors}"></td>
+                       <td>                          
+                          <a href="#" data-th-href="@{/delete(personId=${person.personId})}">Delete</a>
+                       </td>
+                    </tr>   
+                </tbody>
+        </table>       	   
+    </div>
+</body>
+</html>
