@@ -1,6 +1,6 @@
 ﻿## Module 8. Backend: Spring MVC
 
-**Task 1 **
+** Task 1 **
 
 Please cover all next requirments:
   - IoC & Dependency injection should be used CRUD operation for all entities. Search, sort, pagination is optional.
