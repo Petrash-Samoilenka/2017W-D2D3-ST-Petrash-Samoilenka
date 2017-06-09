@@ -11,4 +11,5 @@ Java Mentoring Program 2017. Mentor -  Nickolay Petrash, Mentee - Raman Samoilen
 6. Infrastructure. Continuous integration concepts (Jenkins) *(11 Apr 2017)*
 7. Infrastructure. Build: Maven, Gradle *(18 Apr 2017)*
 8. Backend: Spring MVC *(02 May 2017)*
-9. Lambdas and Streams(Javs 8) *(05 Jun 2017)
+9. Lambdas and Streams(Javs 8) *(05 Jun 2017)*
+10. Backend: Multithreading. Classic model and Concurrency *(12 Jun 2017)*
