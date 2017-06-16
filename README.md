@@ -13,3 +13,5 @@ Java Mentoring Program 2017. Mentor -  Nickolay Petrash, Mentee - Raman Samoilen
 8. Backend: Spring MVC *(02 May 2017)*
 9. Lambdas and Streams(Javs 8) *(05 Jun 2017)*
 10. Backend: Multithreading. Classic model and Concurrency *(12 Jun 2017)*
+11. Backend: Memory managment and garbage collection *(19 Jun 2017)*
+
